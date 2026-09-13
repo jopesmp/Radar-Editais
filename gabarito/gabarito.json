@@ -108,5 +108,60 @@
   "exigencia_atestado_capacidade_tecnica": "Mínimo de 1 atestado, fornecido por pessoa jurídica de direito público ou privado, comprovando aptidão para fornecimento de mobiliários de complexidade tecnológica/operacional equivalente ou superior; admite-se somatório de atestados",
   "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão negativa de falência/recuperação judicial; capital ou patrimônio líquido mínimo de 10% do valor estimado); qualificação técnica (atestado de capacidade técnica)",
   "municipio_uf": "Buriti Alegre/GO"
+},
+{
+  "numeroControlePNCP": "00360305000104-1-000705/2026",
+  "objeto": "Contratação de empresa para prestação de serviços comuns de transporte, tratamento e custódia de valores para unidades CAIXA, unidades lotéricas, correspondentes Caixa Aqui e clientes, no Estado do Mato Grosso, região de Tangará da Serra",
+  "modalidade": "Licitação CAIXA (Concorrência Eletrônica, regida pela Lei 13.303/2016, não pela Lei 14.133)",
+  "valor_estimado": null,
+  "prazo_execucao": "30 (trinta) meses",
+  "data_abertura_propostas": "2026-09-29T10:00:00",
+  "exigencia_atestado_capacidade_tecnica": "Atestado(s) comprovando desempenho de, no mínimo, 30% da parcela de maior relevância mensal: 4 embarques; R$ 3.838.363,20 em valores transportados; 22 milheiros de cédulas/moedas tratados; R$ 58.500.000,00 em valores custodiados",
+  "exigencias_habilitacao": "Cadastro no SICAF ou documentação equivalente; regularidade jurídica/fiscal/trabalhista; qualificação econômico-financeira; qualificação técnica (ver atestado); declaração de veículos especiais e base operacional no(s) município(s) num raio de até 50km",
+  "municipio_uf": "Tangará da Serra/MT (unidade gestora sediada em Brasília/DF)"
+},
+{
+  "numeroControlePNCP": "00360305000104-1-000720/2026",
+  "objeto": "Contratação de empresa para prestação de serviços de vigilância ostensiva (fixa e extraordinária) e serviços de segurança privada a pessoas (ASPP) para unidades da CAIXA no Estado do Pará",
+  "modalidade": "Licitação CAIXA (Concorrência Eletrônica, regida pela Lei 13.303/2016)",
+  "valor_estimado": null,
+  "prazo_execucao": "30 meses (vigência de 18/11/2026 a 17/05/2029)",
+  "data_abertura_propostas": "2026-10-02T10:00:00",
+  "exigencia_atestado_capacidade_tecnica": "Atestado(s) comprovando vigilância ostensiva armada em instituição financeira com no mínimo 40% dos postos fixos previstos (equivalente a 92 postos), por período não inferior a 12 meses; documento de autorização de funcionamento emitido por órgão competente",
+  "exigencias_habilitacao": "Cadastro no SICAF ou documentação equivalente; regularidade jurídica/fiscal/trabalhista; qualificação econômico-financeira; qualificação técnica (ver atestado)",
+  "municipio_uf": "Estado do Pará (unidade gestora sediada em Brasília/DF)"
+},
+{
+  "numeroControlePNCP": "00360305000104-1-000721/2026",
+  "objeto": "Contratação de empresa especializada para prestação de serviços gerenciados e continuados de Business Process Outsourcing (BPO), central de relacionamento multicanal, tratamento de dados e integração tecnológica aplicados à jornada de portabilidade de produtos e serviços bancários, em território nacional",
+  "modalidade": "Licitação CAIXA (Concorrência Eletrônica, regida pela Lei 13.303/2016)",
+  "valor_estimado": null,
+  "prazo_execucao": "24 meses a partir da assinatura",
+  "data_abertura_propostas": "2026-10-02T14:30:00",
+  "exigencia_atestado_capacidade_tecnica": "Atestado(s) comprovando experiência anterior de no mínimo 60.000 tratamentos/eventos operacionais auditáveis em serviços de BPO/atendimento multicanal, em até 12 meses consecutivos; admite-se somatório de atestados",
+  "exigencias_habilitacao": "Cadastro no SICAF ou documentação equivalente; regularidade jurídica/fiscal/trabalhista; qualificação econômico-financeira; qualificação técnica (ver atestado)",
+  "municipio_uf": "Território nacional (unidade gestora sediada em Brasília/DF)"
+},
+{
+  "numeroControlePNCP": "00360305000104-1-000723/2026",
+  "objeto": "Contratação de empresa para prestação de serviços comuns de engenharia para reforma e modernização (RETROFIT) do sistema de climatização da Agência Videira/SC, no município de Videira/SC",
+  "modalidade": "Licitação CAIXA (Concorrência Eletrônica, regida pela Lei 13.303/2016)",
+  "valor_estimado": null,
+  "prazo_execucao": null,
+  "data_abertura_propostas": "2026-10-02T11:15:00",
+  "exigencia_atestado_capacidade_tecnica": "Registro da empresa no CREA com Engenheiro Mecânico no quadro técnico; atestado(s) com CAT/ART comprovando instalação de ar condicionado VRF com capacidade instalada total de 16 HP em um único imóvel (ou instalação equivalente/mais complexa em edificação bancária/comercial); Capacidade Técnico-Profissional dispensada na fase de licitação",
+  "exigencias_habilitacao": "Cadastro no SICAF ou documentação equivalente; regularidade jurídica/fiscal/trabalhista; qualificação econômico-financeira; qualificação técnica (ver atestado); Declaração de Conhecimento e Vistoria (facultativa)",
+  "municipio_uf": "Videira/SC (unidade gestora sediada em Brasília/DF)"
+},
+{
+  "numeroControlePNCP": "01137116000130-1-000038/2026",
+  "objeto": "Contratação de empresa para fornecimento de combustíveis (Diesel S500 e S10) para abastecimento da frota de veículos e máquinas do poder executivo e demais órgãos da administração do Município de Santa Terezinha de Goiás/GO",
+  "modalidade": "Pregão Eletrônico (Registro de Preços)",
+  "valor_estimado": 2858000.00,
+  "prazo_execucao": null,
+  "data_abertura_propostas": "2026-09-01T09:42:00",
+  "exigencia_atestado_capacidade_tecnica": "Pelo menos 1 atestado de capacidade técnica, fornecido por pessoa jurídica de direito público ou privado, comprovando fornecimento satisfatório de combustíveis; não aceito atestado emitido pela própria licitante",
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/trabalhista (inclui FGTS, CNDT); qualificação econômico-financeira (certidão negativa de falência); qualificação técnica (atestado). Exigência específica: licitante deve possuir posto de combustível instalado no próprio município (justificada por continuidade de abastecimento)",
+  "municipio_uf": "Santa Terezinha de Goiás/GO"
 }
 ]
