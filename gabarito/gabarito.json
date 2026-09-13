@@ -42,5 +42,38 @@
   "exigencia_atestado_capacidade_tecnica": null,
   "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão de insolvência civil ou falência)",
   "municipio_uf": "Itambacuri/MG"
+},
+{
+  "numeroControlePNCP": "01138122000101-1-000086/2026",
+  "objeto": "Contratação de empresa especializada em refeições para eventos institucionais do tipo arroz carreteiro e salada",
+  "modalidade": "Pregão Eletrônico (Registro de Preços)",
+  "valor_estimado": 504300.00,
+  "prazo_execucao": "Vigência da Ata: 12 meses a partir da assinatura; cada entrega via Ordem de Fornecimento com antecedência mínima de 3 dias antes do evento",
+  "data_abertura_propostas": "2026-09-18T14:00:00",
+  "exigencia_atestado_capacidade_tecnica": "Comprovação de aptidão por atestado(s) de capacidade técnica em atividade pertinente e compatível com o objeto, fornecido por pessoa jurídica de direito público ou privado",
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista (inclui Alvará Sanitário e de Funcionamento); qualificação econômico-financeira (balanço patrimonial dos 2 últimos exercícios, certidão negativa de falência); qualificação técnica (atestado)",
+  "municipio_uf": "Cristalina/GO"
+},
+{
+  "numeroControlePNCP": "00508903000188-1-001714/2026",
+  "objeto": "Aquisição de materiais elétricos, destinados à recomposição de estoque e ao atendimento das demandas contínuas e imediatas de manutenção predial dos edifícios da Justiça Federal em Goiânia, bem como das Subseções Judiciárias no interior do Estado de Goiás",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": 47428.24,
+  "prazo_execucao": null,
+  "data_abertura_propostas": "2026-09-18T14:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica, fiscal, social, trabalhista e econômico-financeira substituída pelo registro no SICAF",
+  "municipio_uf": "Goiânia/GO"
+},
+{
+  "numeroControlePNCP": "04892707000100-1-000125/2026",
+  "objeto": "Contratação de serviços técnicos especializados de engenharia para execução de gestão ambiental (gerenciamento, supervisão e implementação de programas ambientais) das obras de implantação e pavimentação da rodovia BR-285/RS/SC, entre Timbé do Sul/SC e São José dos Ausentes/RS, extensão 30,43 km",
+  "modalidade": "Concorrência Eletrônica",
+  "valor_estimado": 11104392.42,
+  "prazo_execucao": "Execução: 1710 dias corridos a partir da emissão da Ordem de Serviço; vigência do contrato: 1890 dias corridos a partir da assinatura",
+  "data_abertura_propostas": "2026-10-30T15:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica/fiscal/social/trabalhista/econômico-financeira via SICAF; qualificação técnica remetida ao Projeto Básico/Termo de Referência (não detalhada neste documento)",
+  "municipio_uf": "Brasília/DF (sede administrativa do DNIT/unidadeOrgao) — obra física em Timbé do Sul/SC e São José dos Ausentes/RS"
 }
 ]
