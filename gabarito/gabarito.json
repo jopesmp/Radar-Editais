@@ -75,5 +75,38 @@
   "exigencia_atestado_capacidade_tecnica": null,
   "exigencias_habilitacao": "Habilitação jurídica/fiscal/social/trabalhista/econômico-financeira via SICAF; qualificação técnica remetida ao Projeto Básico/Termo de Referência (não detalhada neste documento)",
   "municipio_uf": "Brasília/DF (sede administrativa do DNIT/unidadeOrgao) — obra física em Timbé do Sul/SC e São José dos Ausentes/RS"
+},
+{
+  "numeroControlePNCP": "04892707000100-1-000128/2026",
+  "objeto": "Contratação de empresa especializada para elaboração de Estudos e Projetos Básico e Executivo de Engenharia, metodologia BIM, visando execução de obras de restauração dos pavimentos de concreto de cimento Portland (pavimento rígido) da Rodovia BR-101, subdividida em 5 lotes (RN, PB, PE, AL, SE)",
+  "modalidade": "Concorrência Eletrônica",
+  "valor_estimado": 33513112.92,
+  "prazo_execucao": "Varia por lote: Lote 1: 409 dias / Lote 2: 598 dias / Lote 3: 720 dias / Lote 4: 1012 dias / Lote 5: 671 dias corridos, a partir da ordem de serviço",
+  "data_abertura_propostas": "2026-11-03T15:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica/fiscal/social/trabalhista/econômico-financeira via SICAF; qualificação técnica remetida ao Projeto Básico/Termo de Referência (não detalhada neste documento)",
+  "municipio_uf": "Brasília/DF (sede administrativa do DNIT) — obra física em RN/PB/PE/AL/SE"
+},
+{
+  "numeroControlePNCP": "01409580000138-1-001406/2026",
+  "objeto": "Aquisição e contratação de instalação de gerador a diesel, potência mínima de 300 kVA, para o CEPFOR",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": 260000.00,
+  "prazo_execucao": null,
+  "data_abertura_propostas": "2026-09-28T09:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica/fiscal/social/trabalhista/econômico-financeira substituível pelo CRC homologado no CADFOR; documentos adicionais remetidos ao Tópico 10 do Termo de Referência (não detalhados no Edital)",
+  "municipio_uf": "Goiânia/GO"
+},
+{
+  "numeroControlePNCP": "45271342000184-1-000044/2026",
+  "objeto": "Contratação de pessoa jurídica para aquisição de mobiliários (mesas e cadeiras) para os prédios do CMEI Maria Gomes de Paiva e CMEI Coração de Mãe, financiado por Emenda Parlamentar Estadual",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": 97026.60,
+  "prazo_execucao": "Entrega em até 10 dias úteis a partir do recebimento da Nota de Empenho/assinatura do contrato; validade do contrato de 12 meses; garantia mínima dos móveis de 12 meses com reposição em até 10 dias úteis em caso de defeito",
+  "data_abertura_propostas": "2026-09-22T08:01:00",
+  "exigencia_atestado_capacidade_tecnica": "Mínimo de 1 atestado, fornecido por pessoa jurídica de direito público ou privado, comprovando aptidão para fornecimento de mobiliários de complexidade tecnológica/operacional equivalente ou superior; admite-se somatório de atestados",
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão negativa de falência/recuperação judicial; capital ou patrimônio líquido mínimo de 10% do valor estimado); qualificação técnica (atestado de capacidade técnica)",
+  "municipio_uf": "Buriti Alegre/GO"
 }
 ]
