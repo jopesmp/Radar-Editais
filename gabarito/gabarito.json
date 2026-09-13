@@ -9,5 +9,38 @@
     "exigencia_atestado_capacidade_tecnica": null,
     "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão de insolvência civil ou falência)",
     "municipio_uf": "Itambacuri/MG"
-  }
+  },
+  {
+  "numeroControlePNCP": "18404855000143-1-000052/2026",
+  "objeto": "REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL AQUISIÇÃO DE COMPUTADORES",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": 340344.00,
+  "prazo_execucao": "30 dias corridos, contados da expedição da ordem de fornecimento; Ata vigente por 1 ano",
+  "data_abertura_propostas": "2026-09-14T09:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão de insolvência civil ou falência)",
+  "municipio_uf": "Itambacuri/MG"
+},
+{
+  "numeroControlePNCP": "00037457000170-1-000019/2026",
+  "objeto": "Contratação de empresa especializada para prestação de serviços de engenharia de natureza continuada, relativos à manutenção preventiva, corretiva, preditiva, eventuais diversas, e assistência técnica dos sistemas de refrigeração, climatização, ventilação e exaustão mecânica em edificações sob gestão da SECEC/DF",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": 9732918.49,
+  "prazo_execucao": "Vigência do contrato: 17 meses a partir da assinatura; início dos serviços em até 5 dias corridos após recebimento da Ordem de Serviço",
+  "data_abertura_propostas": "2026-09-28T09:00:00",
+  "exigencia_atestado_capacidade_tecnica": "Certidões de Acervo Técnico (CAT/CAO) comprovando execução de serviços de manutenção em sistemas de climatização, com quantitativos mínimos por tipo (ex: 540 TR em sistema chiller, 179 TR em sistema split, entre outros) — Tabela 2 do Edital",
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/trabalhista (via SICAF ou documentação equivalente); qualificação econômico-financeira (índices LG≥1, SG≥1, LC≥1, patrimônio líquido ≥10% do valor estimado); capacidade técnica operacional e profissional (CAT registrada no CREA/CAU); diversas declarações (sustentabilidade, não uso de trabalho infantil/degradante, elaboração independente de proposta)",
+  "municipio_uf": "Brasília/DF"
+},
+{
+  "numeroControlePNCP": "18404855000143-1-000053/2026",
+  "objeto": "REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL AQUISIÇÃO DE BLOQUETE SEXTAVADO",
+  "modalidade": "Pregão Eletrônico",
+  "valor_estimado": null,
+  "prazo_execucao": "20 dias corridos, contados da expedição da ordem de fornecimento; Ata vigente por 1 ano",
+  "data_abertura_propostas": "2026-09-14T14:00:00",
+  "exigencia_atestado_capacidade_tecnica": null,
+  "exigencias_habilitacao": "Habilitação jurídica; regularidade fiscal/social/trabalhista; qualificação econômico-financeira (certidão de insolvência civil ou falência)",
+  "municipio_uf": "Itambacuri/MG"
+}
 ]
