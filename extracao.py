@@ -183,3 +183,25 @@ def extrair_campos_textuais(cnpj: str, ano: int, sequencial: int) -> dict:
     resultado["modelo_usado"] = modelo
     resultado["latencia_segundos"] = latencia
     return resultado
+
+
+def extrair_campos_textuais_de_texto(texto_edital: str | None) -> dict:
+    """Mesma lógica de extrair_campos_textuais, mas recebe o texto já baixado
+    (evita buscar o PDF duas vezes quando o pipeline também precisa do texto
+    pra validação de citação)."""
+    if texto_edital is None:
+        motivo = "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+        campo_vazio = {"valor": None, "trecho_citado": None, "motivo": motivo}
+        return {
+            "prazo_execucao": campo_vazio,
+            "exigencia_atestado_capacidade_tecnica": campo_vazio,
+            "exigencias_habilitacao": campo_vazio,
+            "modelo_usado": None,
+            "latencia_segundos": None,
+        }
+
+    prompt = montar_prompt(texto_edital)
+    resultado, modelo, latencia = chamar_llm(prompt)
+    resultado["modelo_usado"] = modelo
+    resultado["latencia_segundos"] = latencia
+    return resultado
