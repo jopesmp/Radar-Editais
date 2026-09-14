@@ -1,0 +1,291 @@
+[
+  {
+    "prazo_execucao": {
+      "valor": "1 (um) ano e poderá ser prorrogado, por igual período",
+      "trecho_citado": "16.1 - Conforme previsto no artigo 84, da Lei Federal 14.133/2021, o prazo de vigência da ata de registro de preços será de 1 (um) ano e poderá ser prorrogado, por igual período, desde que comprovado o preço vantajoso."
+    },
+    "exigencia_atestado_capacidade_tecnica": null,
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 4.161284923553467,
+    "numeroControlePNCP": "18404855000143-1-000051/2026",
+    "erro": null,
+    "tempo_total_segundos": 10.7664475440979
+  },
+  {
+    "prazo_execucao": null,
+    "exigencia_atestado_capacidade_tecnica": null,
+    "exigencias_habilitacao": {
+      "valor": "documentos previstos no Termo de Referência, declaração de atendimento aos requisitos de habilitação, reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, regularidade fiscal e trabalhista para ME/EPP apenas para efeito de contratação, e demais condições de participação previstas no Edital e seus anexos.",
+      "trecho_citado": "8.1 - Os documentos previstos no Termo de Referência, necessários e suficientes para demonstrar a capacidade do licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, nos termos dos arts. 62 a 70 da Lei nº 14.133, de 2021. 8.6 - Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o declarante responderá pela veracidade das informações prestadas, na forma da lei (art. 63, I, da Lei nº 14.133/2021). 8.7 - Será verificado se o licitante apresentou no sistema, sob pena de inabilitação, a declaração de que cumpre as exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, previstas em lei e em outras normas específicas. 8.15 - A comprovação de regularidade fiscal e trabalhista das microempresas e das empresas de pequeno porte somente será exigida para efeito de contratação, e não como condição para participação na licitação (art. 4º do Decreto nº 8.538/2015)."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 5.744098663330078,
+    "numeroControlePNCP": "18404855000143-1-000052/2026",
+    "erro": null,
+    "tempo_total_segundos": 10.703546524047852
+  },
+  {
+    "prazo_execucao": {
+      "valor": "1 (um) ano, prorrogável por igual período",
+      "trecho_citado": "16.1 - Conforme previsto no artigo 84, da Lei Federal 14.133/2021, o prazo de vigência da ata de registro de preços será de 1 (um) ano e poderá ser prorrogado, p or igual período, desde que comprovado o preço vantajoso."
+    },
+    "exigencia_atestado_capacidade_tecnica": null,
+    "exigencia_atestado_capacidade_tecnica_trecho_citado": null,
+    "exigencias_habilitacao": {
+      "valor": "Documentos previstos no Termo de Referência para demonstrar capacidade técnica; declaração de que atende aos requisitos de habilitação; declaração de cumprimento das exigências de reserva de cargos para pessoa com deficiência e reabilitado da Previdência Social; comprovação de regularidade fiscal e trabalhista apenas para efeito de contratação no caso de ME/EPP.",
+      "trecho_citado": "8.1 - Os documentos previstos no Termo de Referência, necessários e suficientes para demonstrar a capacidade do licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, nos termos dos arts. 62 a 70 da Lei nº 14.133, de 2021.\n8.6 - Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o declarante responderá pela veracidade das informações prestadas, na forma da lei (art. 63, I, da Lei nº 14.133/2021).\n8.7 - Será verificado se o licitante apresentou no sistema, sob pena de inabilitação, a declaração de que cumpre as exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, previstas em lei e em outras normas específicas.\n8.15 - A comprovação de regularidade fiscal e trabalhista das microempresas e das empresas de pequeno porte somente será exigida para efeito de contratação, e não como condição para participação na licitação (art. 4º do Decreto nº 8.538/2015)."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 12.920230627059937,
+    "numeroControlePNCP": "18404855000143-1-000053/2026",
+    "erro": null,
+    "tempo_total_segundos": 17.924628257751465
+  },
+  {
+    "prazo_execucao": {
+      "valor": "17 (dezessete) meses, contados a partir da data de sua assinatura",
+      "trecho_citado": "d) O prazo de vigência do Contrato será de 17 (dezessete) meses, contados a partir da data de sua assinatura, conforme item 14 do Projeto Básico."
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": "Uma ou mais CATs/CAOs com atestados de capacidade técnico-operacional, comprovando execução com características, quantidades e grau de complexidade compatíveis com o objeto. Quantidades mínimas: 59 TR por 24 meses em sistemas compactos Self-Contained; 540 TR por 24 meses em chiller; 179 TR por 24 meses em split/splitão; 1 UN em automação; 9 UN em análise e diagnóstico de vibração; e 1 UN por 24 meses, com equipe volante e residente, em pelo menos 6 localidades distintas, em uma única contratação. Em consórcio, a comprovação deve ser proporcional à participação de cada empresa.",
+      "trecho_citado": "A PROPONENTE deverá comprovar sua Capacidade Técnico-operacional por meio da apresentação de uma ou mais Certidões de Acervo Técnico (CAT), acompanhadas dos seus respectivos atestados de capacidade técnica, devidamente registrados no CREA ou no CAU conforme a legislação aplicável, que comprovem a execução, pela Licitante, de obra ou serviço com características, quantidades e grau de complexidade pertinentes e compatíveis com o objeto da licitação. TABELA 2 Capacidade Técnico-Operacional M DESCRIÇÃO DOS SERVIÇOS UNIDADE QUANTIDADE (ORÇADA) QUANTIDADE (EXIGIDA) RELEVÂNCIA 1.1 Execução de serviços continuados de operação, manutenção preventiva, preditiva e corretiva, com equipe residente, em sistema compactos e terminais (Self-Contained) de ar condicionado por expansão direta, equipado por, no mínimo, 01 (um) resfriador líquido com compressor do tipo alternativo e/ou scroll, ou equivalente.Pelo período mínimo de 24 (vinte e quatro) meses. TR (TONELADA DE REFRIGERAÇÃO) 119 59 Técnica e de valor 1.2 Execução de serviços continuados de operação, manutenção preventiva, preditiva e corretiva, com equipe residente, em sistema central (chiller), equipado por, no mínimo, 02 (dois) resfriadores líquido com compressor do tipo parafuso e/ou centrífugo, ou equivalente que juntos somem a potência especificada. Pelo período mínimo de 24 (vinte e quatro) meses. TR (TONELADA DE REFRIGERAÇÃO) 1080 540 Técnica e de valor 1.3 Execução de serviços continuados de operação, manutenção preventiva, preditiva e corretiva, com equipe residente, em sistema split e ou splitão de ar condicionado por expansão indireta, equipado por, no mínimo, 20 (vinte) equipamentos mistos, do tipo Hi-Wall, Piso-Teto e Cassete cujas capacidades somem a potência especificada. Pelo período mínimo de 24 (vinte e quatro) meses.. TR (TONELADA DE REFRIGERAÇÃO) 358 179 Técnica e de valor 1.4 Execução de serviços continuados de Operação, manutenção preventiva, preditiva e corretiva, com equipe residente, em sistemas de automação em equipamentos de climatização. Pelo período mínimo de 24 (vinte e quatro) meses. UN (UNIDADE) 2 1 Técnica 1.5 Execução de serviços de análise e diagnóstico de vibração de compressores tipo parafuso e/ou centrífugo e/ou scroll, ou equivalente, conjutno de moto-bombas e aiﬁns. UN (UNIDADE) 18 9 Técnica 1.6 Execução de atividades de operação e manutenção em sistemas de ar-condicionado, pelo período mínimo de 24 (vinte e quatro) meses, com equipe volante e residente, em pelo menos, 6 (seis) localidades distintas em uma única contratação. UN (UNIDADE) 3 1 Técnica Os quantitativos exigidos para comprovação de capacidade técnico-operacional representam no máximo 50% da área de construção ou do total orçado para o objeto em questão, conforme determina a Decisão Normativa nº 002/2003, expedida pelo Tribunal de Contas do Distrito Federal e demais precedentes daquela Corte de Contas, tais como, as Decisões Ordinárias nº 3394/2014, nº 4211/2013, nº 781/2011 e Decisão Extraordinária nº 6610/2010. A capacidade técnica exigida visa qualiﬁcar a seleção da proposta mais vantajosa e resguardar a Administração Pública a partir da participação de licitantes que detenham infraestrutura e recursos compatíveis com as características dos trabalhos a realizar na contratação em questão. Quanto aos atestados de capacidade técnico-operacional deverá ser observado o seguinte: A exigência de apresentação de atestado visa obter a comprovação de que a Proponente executou serviços com características pertinentes e semelhantes ao objeto licitado. Caso a Proponente seja um Consórcio, cada uma das empresas participantes dessa parceria deverá, necessariamente, contribuir com a comprovação da capacidade técnica exigida no Certame, no mínimo, proporcionalmente a sua participação no Consórcio. Deverão vir acompanhados das respectivas Certidões de Acervo Operacional - CAO, nos termos da resolução nº 1.137/2023 - CONFEA, e da Resolução nº 93/2014 - CAU (e suas alterações), ou das Certidões de Acervo técnico (CAT) com suas anotações/registros de responsabilidade técnica (ART/RRT), emitidas pelos conselhos de fiscalização profissional, em nome dos profissionais vinculados aos referidos atestados, conforme entendimento do Tribunal de Contas da União - TCU (Acordão nº 3298/2022 - 2ª Câmara)."
+    },
+    "exigencias_habilitacao": {
+      "valor": "Cadastro e habilitação parcial no SICAF ou apresentação da documentação do item 7.2.2; superveniência de fatos impeditivos; CNDT; declaração sobre trabalho de menores; declaração para ME/EPP quando for o caso; balanço e demonstrações contábeis e análise econômico-financeira; certidão negativa de falência e recuperação judicial ou extrajudicial; índices mínimos de Liquidez Geral, Solvência Geral e Liquidez Corrente; atestado de capacidade técnica operacional; e declarações previstas nos anexos VII, VIII, IV, V, VI, IX, X e XVI.",
+      "trecho_citado": "7.2 Para habilitar-se na presente licitação as empresas deverão estar devidamente CADASTRADAS e HABILITADAS PARCIALMENTE no Sistema de Cadastramento Uniﬁcado de Fornecedores – SICAF, ou mediante a apresentação da documentação relacionada no item 7.2.2 deste Edital. 7.2.1. As licitantes devidamente cadastradas no SICAF deverão encaminhar os seguintes documentos: I – Declarar, sob as penas da lei, a superveniência de fatos impeditivos para sua habilitação no presente processo licitatório (modelo Anexo III); II - Certidão Negativa de Débitos Trabalhistas – CNDT, em plena validade, para comprovar a inexistência de débitos perante a Justiça do Trabalho, por meio eletrônico/via internet – www.tst.jus.br/certidao - (Lei nº 12.440, de 07 de julho de 2011). III – Declaração de que não utiliza mão-de-obra direta ou indireta de menores de 18 (dezoito) anos para a realização de trabalhos noturnos, perigosos ou insalubres, bem como não utiliza, para qualquer trabalho, mão-de-obra direta ou indireta de menores de 16 (dezesseis) anos, exceto na condição de aprendiz, a partir de 14 (quatorze) anos (conforme Art. 92 §1 alínea “d” do Regulamento de Licitações e Contratos da Novacap – RLC) (modelo Anexo II); IV - Declaração Simpliﬁcada de Micro ou Empresa de Pequeno Porte, expedida pela Junta Comercial e Declaração de Optante pelo Simples atualizada, para as licitantes que manifestarem o enquadramento para ﬁns de auferir os benefícios da Lei Complementar 123/06, quando for o caso. V. - O Balanço Patrimonial e demais demonstrações contábeis do último exercício social, já exigíveis e apresentados na forma da Lei devidamente registrados, que comprovem a boa situação ﬁnanceira da empresa, acompanhadas da análise econômico-ﬁnanceira, sendo essas, em papel timbrado da empresa, legível, sem rasuras e devidamente assinada pelo representante legal e o proﬁssional de contabilidade legalmente habilitado e autorizado. a) Será considerado o dia 1º de julho do exercício em que ocorrer a licitação como marco inicial para a apresentação do balanço e demonstrações contábeis do exercício imediatamente anterior ao do certame. b) É vedada a substituição do Balanço Patrimonial por balancetes ou balanços provisórios; c) As sociedades constituídas há menos de 12 (doze) meses, deverão apresentar o balanço de abertura.; d) No caso especíﬁco de Sociedades Anônimas, o balanço e demonstrações contábeis deverão ser comprovadas por meio da publicação no Diário Oﬁcial do Distrito Federal ou do estado de origem; e) As microempresas, empresas de pequeno porte e microempreendedores individuais, optantes do Simples Nacional, podem apresentar escrituração contábil simpliﬁcada para ﬁns de qualiﬁcação econômico-ﬁnanceira. VI. Certidão negativa de falência, de recuperação judicial ou extrajudicial expedida pelo juízo competente. a) na impossibilidade de apresentação da certidão indicada no item 1.1.2, a licitante deverá apresentar o Plano de Recuperação aprovado e homologado judicialmente com a recuperação já deferida, que será submetida à análise da Diretoria Jurídica. VII. A boa situação ﬁnanceira da sociedade empresária será avaliada pelos Índices de Liquidez Geral ≥ 1, Solvência Geral ≥ 1, Liquidez corrente ≥ 1, resultantes da aplicação das seguintes fórmulas: Índice de Liquidez Geral (LG) ILG = (ATIVO CIRC + ATIVO NÃO CIRC)/(PASSIVO CIRC +PASSIVO NÃO CIRC) Índice de Solvência Geral (SG) ISG = ATIVO GLOBAL / (PASSIVO CIRC + PASSIVO NÃO CIRC) Índice de Liquidez Corrente (LC) ILC = ATIVO CIRCULANTE / PASSIVO CIRCULANTE XVI. CAPACIDADE TÉCNICA XVI.a) Da capacidade técnica operacional A PROPONENTE deverá comprovar sua Capacidade Técnico-operacional por meio da apresentação de uma ou mais Certidões de Acervo Técnico (CAT), acompanhadas dos seus respectivos atestados de capacidade técnica, devidamente registrados no CREA ou no CAU conforme a legislação aplicável, que comprovem a execução, pela Licitante, de obra ou serviço com características, quantidades e grau de complexidade pertinentes e compatíveis com o objeto da licitação. X. Declaração para ﬁns do Decreto nº 39.860, de 30 de maio de 2019 (Portaria nº 356, de 29 de julho de 2019), na forma do “Anexo VIII”, deste Instrumento. XI. Declaração de Ciência e Termo de Responsabilidade (Anexo IV). XII. Declaração de Microempresa e Empresa de Pequeno Porte (Anexo V). XIII. Declaração de que Concorda com os Termos do Edital (Anexo VI). XIV. Declaração de Elaboração Independente de Proposta (Anexo IX). XV. Declaração de não utilização de Trabalho Degradante ou Forçado (Anexo X)."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 22.011467695236206,
+    "numeroControlePNCP": "00037457000170-1-000019/2026",
+    "erro": null,
+    "tempo_total_segundos": 25.600877285003662
+  },
+  {
+    "prazo_execucao": {
+      "valor": "12 (doze) meses",
+      "trecho_citado": "• 1.4. Vigência: Prazo de vigência de 12 (doze) meses, contados a partir da assinatura do contrato ou da Ata de Registro de Preços."
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": "Comprovação de aptidão no desempenho de atividade pertinente e compatível em características, quantidades e prazos com o objeto da licitação",
+      "trecho_citado": "Comprovação de aptidão no desempenho de atividade pertinente e compatível em características, quantidades e prazos com o objeto da licitação – Atestado(s) de Capacidade Técnica , (DO OBJETO DESS A LICITAÇÃO) fornecido(s) por pessoa jurídica de direito público ou privado, quando for emitido por ente privado deverá este ser com firma reconhecida de quem o subscreveu."
+    },
+    "exigencias_habilitacao": {
+      "valor": "Habilitação jurídica, regularidade fiscal e trabalhista, qualificação econômico-financeira e habilitação técnica",
+      "trecho_citado": "Caso atendidas as condições de participação, a habilitação dos licitantes será verificada por meio do portal de compras publicas, em relação à habilitação jurídica, à regularidade fiscal e trabalhista, à qualificação econômica financeira e habilitação técnica."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 3.764662742614746,
+    "numeroControlePNCP": "01138122000101-1-000086/2026",
+    "erro": null,
+    "tempo_total_segundos": 7.176663875579834
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "Documentos para demonstrar a capacidade de realizar o objeto; documentação de habilitação jurídica, fiscal, social e trabalhista e econômico-financeira; declaração de que atende aos requisitos de habilitação; declaração de cumprimento das exigências de reserva de cargos para pessoa com deficiência e reabilitado da Previdência Social; declaração de que as propostas compreendem a integralidade dos custos trabalhistas; cumprimento das condições de participação no certame; comprovação das condições de habilitação e contratação consignadas neste Edital.",
+      "trecho_citado": "Os documentos previstos no Termo de Referência, necessários e suficientes para demonstrar a capacidade do licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, nos termos dos arts. 62 a 70 da Lei nº 14.133, de 2021. | A documentação exigida para fins de habilitação jurídica, fiscal, social e trabalhista e econômico-financeira, poderá ser substituída pelo registro cadastral no Sicaf. | Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o declarante responderá pela veracidade das informações prestadas, na forma da lei. | Será verificado se o licitante apresentou no sistema, sob pena de inabilitação, a declaração de que cumpre as exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, previstas em lei e em outras normas específicas. | O licitante deverá apresentar, sob pena de desclassificação, declaração de que suas propostas econômicas compreendem a integralidade dos custos para atendimento dos direitos trabalhistas assegurados na Constituição Federal, nas leis trabalhistas, nas normas infralegais, nas convenções coletivas de trabalho e nos termos de ajustamento de conduta vigentes na data de entrega das propostas. | O licitante provisoriamente classificado em primeiro lugar atende às condições de participação no certame, conforme previsto no art. 14 da Lei nº 14.133, de 2021, legislação correlata e no item 2.9 do edital, especialmente quanto à existência de sanção que impeça a participação no certame ou a futura contratação, mediante a consulta aos seguintes cadastros: | Os documentos relativos à regularidade fiscal que constem do Termo de Referência somente serão exigidos, em qualquer caso, em momento posterior ao julgamento das propostas, e apenas do licitante mais bem classificado. | A comprovação de regularidade fiscal e trabalhista das microempresas e das empresas de pequeno porte somente será exigida para efeito de contratação, e não como condição para participação na licitação. | O adjudicatário terá o prazo de 5 (cinco) dias úteis, contados a partir da data de sua convocação, para assinar o termo de contrato ou instrumento equivalente, sob pena de decair o direito à contratação, sem prejuízo das sanções previstas neste Edital. | Na assinatura do contrato ou instrumento equivalente será exigido o Cadastro Informativo de Créditos não Quitados do Setor Público Federal – Cadin e a comprovação das condições de habilitação e contratação consignadas neste Edital, que deverão ser mantidas pelo fornecedor durante a vigência do contrato."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 6.868436574935913,
+    "numeroControlePNCP": "00508903000188-1-001714/2026",
+    "erro": null,
+    "tempo_total_segundos": 8.594338655471802
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "modelo_usado": null,
+    "latencia_segundos": null,
+    "numeroControlePNCP": "00360305000104-1-000705/2026",
+    "erro": null,
+    "tempo_total_segundos": 0.44378042221069336
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "modelo_usado": null,
+    "latencia_segundos": null,
+    "numeroControlePNCP": "00360305000104-1-000720/2026",
+    "erro": null,
+    "tempo_total_segundos": 0.4012913703918457
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "modelo_usado": null,
+    "latencia_segundos": null,
+    "numeroControlePNCP": "00360305000104-1-000721/2026",
+    "erro": null,
+    "tempo_total_segundos": 0.443204402923584
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "modelo_usado": null,
+    "latencia_segundos": null,
+    "numeroControlePNCP": "00360305000104-1-000723/2026",
+    "erro": null,
+    "tempo_total_segundos": 0.5503244400024414
+  },
+  {
+    "prazo_execucao": {
+      "valor": "1710 (um mil e setecentos e dez) dias corridos",
+      "trecho_citado": "1.4.1. O prazo de execução da contratação é de 1710  (um mil e setecentos e dez) dias \ncorridos, contados a partir da emissão da Ordem de Serviço."
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "Documentos de habilitação previstos no Projeto Básico/Termo de Referência para demonstrar a capacidade do licitante de realizar o objeto; documentação jurídica, fiscal, social e trabalhista e econômico-financeira; e declarações de atendimento aos requisitos de habilitação, reserva de cargos para pessoa com deficiência e reabilitado da Previdência Social, e de integralidade dos custos trabalhistas.",
+      "trecho_citado": "7.1. Os documentos previstos no Projeto Básico/Termo de Referência, necessários e suficientes para \ndemonstrar a capacidade do licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, \nnos termos dos arts. 62 a 70 da Lei nº 14.133, de 2021.\n7.1.1. A documentação exigida para fins de habilitação jur ídica, fiscal, social e trabalhista e \neconômico-ﬁnanceira, poderá ser substituída pelo registro cadastral no SICAF.\n7.6. Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o \ndeclarante responderá pela veracidade das informaçõ es prestadas, na forma da lei (art. 63, I, da Lei n º \n14.133/2021).\n7.7. Será verificado se o licitante apresentou no sistem a, sob pena de inabilitação, a declaração de que \ncumpre as exigências de reserva de cargos para pess oa com deficiência e para reabilitado da Previdênci a \nSocial, previstas em lei e em outras normas específicas.\n7.8. O licitante deverá apresentar, sob pena de desclass ificação, declaração de que suas propostas \neconômicas compreendem a integralidade dos custos para atendimento dos direitos trabalhistas assegurados \nna Constituição Federal, nas leis trabalhistas, nas  normas infralegais, nas convenções coletivas de tr abalho \ne nos termos de ajustamento de conduta vigentes na data de entrega das propostas."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 6.359149217605591,
+    "numeroControlePNCP": "04892707000100-1-000125/2026",
+    "erro": null,
+    "tempo_total_segundos": 10.040636777877808
+  },
+  {
+    "prazo_execucao": {
+      "valor": "Lote 1: 409 (quatrocentos e nove) dias corridos, incluindo prazos para análises do DNIT; Lote 2: 598 (quinhentos e noventa e oito) dias corridos, incluindo prazos para análises do DNIT; Lote 3: 720 (setecentos e vinte) dias corridos, incluindo prazos para análises do DNIT; Lote 4: 1012 (mil e doze) dias corridos, incluindo prazos para análises do DNIT; Lote 5: 671 (seiscentos e setenta e um) dias corridos, incluindo prazos para análises do DNIT.",
+      "trecho_citado": "1.6.1. Lote 1: 409 (quatrocentos e nove) dias corridos, incluindo prazos para análises do DNIT; 1.6.2. Lote 2: 598 (quinhentos e noventa e oito) dias corridos, incluindo prazos para análises do DNIT. 1.6.3. Lote 3: 720 (setecentos e vinte) dias corridos, incluindo prazos para análises do DNIT; 1.6.4. Lote 4: 1012 (mil e doze) dias corridos, incluindo prazos para análises do DNIT; 1.6.5. Lote 5: 671 (seiscentos e setenta  e um) dias  corridos, incluindo prazos para análises do DNIT."
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "Documentos de habilitação previstos no Projeto Básico/Termo de Referência; documentação jurídica, fiscal, social e trabalhista e econômico-financeira, com possibilidade de substituição pelo registro cadastral no SICAF; declaração de cumprimento dos requisitos de habilitação; declaração de reserva de cargos para pessoa com deficiência e reabilitado da Previdência Social; declaração de integralidade dos custos trabalhistas nas propostas; declaração de conhecimento das condições do local; comprovação do plano de recuperação judicial ou extrajudicial, se aplicável; documentos de consorciados, quando houver consórcio.",
+      "trecho_citado": "7.1. Os documentos previstos no Projeto Básico/ Termo de Referência, necessários e suficientes para demonstrar a capacidade do licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, nos termos dos arts. 62 a 70 da Lei nº 14.133, de 2021. 7.1.1. A documentação exigida para fins de habilitação jurídica, fiscal, social e trabalhista e econômico-financeira, poderá ser substituída pelo registro cadastral no SICAF. 7.6. Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o declarante responderá pela veracidade das informações prestadas, na forma da lei ( art. 63, I, da Lei nº 14.133/2021). 7.7. Será verificado se o licitante apresentou no sistema, sob pena de inabilitação, a declaração de que cumpre as exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, previstas em lei e em outras normas específicas. 7.8. O licitante deverá apresentar, sob pena de desclassificação, declaração de que suas propostas econômicas compreendem a integralidade dos custos para atendimento dos direitos trabalhistas assegurados na Constituição Federal, nas leis trabalhistas, nas normas infralegais, nas convenções coletivas de trabalho e nos termos de ajustamento de conduta vigentes na data de entrega das propostas. 7.9.6. Todas as empresas, mesmo aquelas que não desejarem realizar a visita técnica, deverão apresentar declaração de que tem pleno conhecimento das condições do local (conforme art. 63, § 3º da Lei 14.133/21). 7.18. Caso seja positiva a certidão de recuperação judicial ou extrajudicial, o licitante deverá apresentar a comprovação de que o respectivo plano de recuperação foi acolhido judicialmente, na forma do art. 58 da Lei nº 11.101, de 09 de fevereiro de 2005, sob pena de inabilitação. 12.5. Deverão ser apresentados os documentos exigidos no instrumento convocatório quanto a cada consorciado, admitindo-se, para efeito de habilitação técnica, o somatório dos quantitativos de cada consorciado e, para efeito de habilitação econômico-financeira, o somatório dos valores de cada consorciado."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 8.771846294403076,
+    "numeroControlePNCP": "04892707000100-1-000128/2026",
+    "erro": null,
+    "tempo_total_segundos": 11.575482368469238
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "trecho_citado": null,
+      "motivo": "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
+    },
+    "modelo_usado": null,
+    "latencia_segundos": null,
+    "numeroControlePNCP": "01137116000130-1-000038/2026",
+    "erro": null,
+    "tempo_total_segundos": 2.5119469165802
+  },
+  {
+    "prazo_execucao": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "documentação para demonstrar capacidade de realizar o objeto; habilitação jurídica, fiscal, social e trabalhista e econômico-financeira; documentação do CADFOR; declaração de não impedimento; e comprovação de regularidade fiscal e trabalhista das ME/EPP somente para contratação",
+      "trecho_citado": "Serão exigidos para fins de habilitação os documentos necessários e suﬁcientes para demonstrar a capacidade do licitante de realizar o objeto da licitação, nos termos dos arts. 62 a 70 da Lei federal nº 14.133, de 01 de abril de 2021, incluindo os documentos previstos no Tópico 10 do TR - Termo de Referência. A documentação exigida para ﬁns de habilitação jurídica, ﬁscal, social e trabalhista e econômico-ﬁnanceira, indicados na lista de documentos informada no link: https://sislog.go.gov.br/Fornecedor/DocumentoHomologacao, nos termos do Decreto estadual nº 7.425, de 16 de Agosto de 2011, poderá ser subsTtuída pelo CerTﬁcado de Registro Cadastral – CRC, homologado no Cadastro de Fornecedores do Estado – CADFOR. O licitante que participar do certame com o status de \"cadastro provisório\" no CADFOR, deverá anexar, via sistema, documentação necessária ao cadastro, conforme lista de documentos informada no link: https://sislog.go.gov.br/Fornecedor/DocumentoHomologacao, nos termos do Decreto estadual nº 7.425, de 16 de Agosto de 2011. Veriﬁcado se o licitante apresentou as declarações enumeradas no item 4.3 deste Edital, e o declarante responderá pela veracidade das informações prestadas, na forma do art. 63, I, da Lei federal nº 14.133, de 01 de abril de 2021. A comprovação de regularidade ﬁscal e trabalhista das microempresas e das empresas de pequeno porte somente será exigida para efeito de contratação, e não como condição para participação na licitação."
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 5.612499952316284,
+    "numeroControlePNCP": "01409580000138-1-001406/2026",
+    "erro": null,
+    "tempo_total_segundos": 8.850731372833252
+  },
+  {
+    "prazo_execucao": {
+      "valor": "Entrega de forma imediata dos itens do objeto ora licitado.",
+      "trecho_citado": "com a entrega de forma imediata dos itens do objeto ora licitado, mediante ordens de compras e, ainda, de acordo com as condições estabelecidas neste Edital."
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "trecho_citado": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "Habilitação Jurídica, Habilitação Fiscal, Social e Trabalhista, Habilitação Econômico-Financeira e Habilitação Técnica.",
+      "trecho_citado": "Os licitantes deverão encaminhar, nos termos deste Edital, a documentação relacionada no item a seguir, para fins de habilitação, conforme disposto nos Arts. 62 a 70, da Lei Federal nº 14.133/21:"
+    },
+    "modelo_usado": "nex-agi/nex-n2.5-mini:free",
+    "latencia_segundos": 4.074619770050049,
+    "numeroControlePNCP": "45271342000184-1-000044/2026",
+    "erro": null,
+    "tempo_total_segundos": 8.501652717590332
+  }
+]
