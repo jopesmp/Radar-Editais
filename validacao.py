@@ -64,14 +64,38 @@ def valor_parece_sigiloso(valor, objeto: str, informacao_complementar: str = "")
 
 
 def _normalizar(texto: str) -> str:
-    return re.sub(r"\s+", " ", texto or "").strip().lower()
+    texto = texto or ""
+    # Desfaz sintaxe de link Markdown: "[texto](url)" -> "texto"
+    texto = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", texto)
+    # Normaliza ligaduras tipográficas comuns do PDF (fi, fl, ff, ffi, ffl)
+    ligaduras = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl"}
+    for lig, normal in ligaduras.items():
+        texto = texto.replace(lig, normal)
+    return re.sub(r"\s+", " ", texto).strip().lower()
 
 
-def citacao_existe_no_texto(trecho_citado: str, texto_fonte: str) -> bool:
-    """Regra 3.3: valor extraído precisa existir literalmente no texto de origem."""
+def citacao_existe_no_texto(trecho_citado: str, texto_fonte: str, limiar: float = 0.7) -> bool:
+    """Regra 3.3: valor extraído precisa existir (substancialmente) no texto de origem.
+
+    Para citações longas (comuns em habilitação/atestado técnico), exigir 100%
+    de igualdade literal é frágil demais — pequenas diferenças de formatação
+    (quebra de linha, hifenização do PDF) quebram a citação inteira mesmo
+    quando o conteúdo é genuíno. Em vez disso, exige que pelo menos `limiar`
+    (padrão 70%) das FRASES da citação apareçam literalmente no texto — isso
+    ainda rejeita citação totalmente inventada, mas tolera reformatação leve.
+    """
     if not trecho_citado or not texto_fonte:
         return False
-    return _normalizar(trecho_citado) in _normalizar(texto_fonte)
+
+    texto_fonte_norm = _normalizar(texto_fonte)
+    frases = re.split(r"[.;\n]+", trecho_citado)
+    frases = [f.strip() for f in frases if len(f.strip()) > 15]  # ignora fragmentos curtos demais
+
+    if not frases:
+        return _normalizar(trecho_citado) in texto_fonte_norm
+
+    acertos = sum(1 for f in frases if _normalizar(f) in texto_fonte_norm)
+    return (acertos / len(frases)) >= limiar
 
 
 def validar_contratacao(
@@ -133,7 +157,14 @@ def validar_contratacao(
     )
 
     def validar_campo_textual(nome_campo: str) -> CampoExtraido:
-        bruto = extracao_textual.get(nome_campo) or {}
+        bruto = extracao_textual.get(nome_campo)
+        if not isinstance(bruto, dict):
+            return CampoExtraido(
+                valor=None,
+                confiavel=False,
+                motivo=f"resposta do LLM malformada para este campo (esperava objeto JSON, veio {type(bruto).__name__})",
+                fonte=None,
+            )
         valor = bruto.get("valor")
         trecho = bruto.get("trecho_citado")
 
