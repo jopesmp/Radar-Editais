@@ -4,7 +4,7 @@ Sistema que ingere editais de licitação pública do PNCP, extrai 8 campos
 estruturados, valida o que extraiu por regras determinísticas (sem IA) e
 calcula um score de aderência ao perfil da Engevia Consultoria e Projetos.
 
-## Como rodar (menos de 5 minutos)
+## Como rodar:
 
 ### 1. Pré-requisitos
 
@@ -74,19 +74,21 @@ valor informado, ordenadas da maior pra menor pontuação.
 
 ## Estrutura do projeto
 
-schema.py # formato dos dados (dataclasses) — sem lógica de decisão
-ingestao.py # coleta de dados da API do PNCP (corrige bug herdado de dedup)
-extracao.py # extração via LLM (só os 3 campos que exigem ler o PDF)
-validacao.py # validação determinística — NUNCA importa extracao.py nem chama LLM
-score.py # cálculo do score de aderência ao perfil da Engevia
-pipeline.py # orquestrador: liga extracao.py e validacao.py
-storage.py # persistência em JSON (sem banco relacional, fora de escopo)
-api.py # FastAPI, endpoint GET /oportunidades
-eval.py # harness de avaliação contra o gabarito
-gabarito/ # 15 contratações anotadas manualmente
-dados/brutos/ # JSON cru coletado da API do PNCP
-dados/processados/ # saída do pipeline
-scripts/ # utilitários de apoio (não fazem parte do pipeline formal)
+.
+├── schema.py              # formato dos dados (dataclasses) — sem lógica de decisão
+├── ingestao.py             # coleta de dados da API do PNCP (corrige bug herdado de dedup)
+├── extracao.py             # extração via LLM (só os 3 campos que exigem ler o PDF)
+├── validacao.py            # validação determinística — NUNCA importa extracao.py nem chama LLM
+├── score.py                # cálculo do score de aderência ao perfil da Engevia
+├── pipeline.py              # orquestrador: liga extracao.py e validacao.py
+├── storage.py               # persistência em JSON (sem banco relacional, fora de escopo)
+├── api.py                   # FastAPI, endpoint GET /oportunidades
+├── eval.py                  # harness de avaliação contra o gabarito
+├── gabarito/                # 15 contratações anotadas manualmente
+├── dados/
+│   ├── brutos/               # JSON cru coletado da API do PNCP
+│   └── processados/          # saída do pipeline
+└── scripts/                 # utilitários de apoio (não fazem parte do pipeline formal)
 
 
 ## Coletando novos dados
