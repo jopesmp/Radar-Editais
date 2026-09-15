@@ -85,4 +85,10 @@ Limitações de escopo do MVP registradas explicitamente: (1) pipeline não proc
 Exigência de habilitação pode ser geograficamente restritiva: edital de Santa Terezinha de Goiás exige que o licitante já possua posto de combustível instalado no próprio município. Relevante pro score.py — esse tipo de exigência pode ser um desqualificador direto (a Engevia não tem presença física em todo município do DF/GO/MG), diferente de exigências "genéricas" de habilitação que qualquer empresa cumpre.
 
 Organização de branches por tarefa: feat/ingestao-pncp (Dia 1) e feat/gabarito (Dia 2), cada uma com commits granulares ao longo do trabalho — decisão tomada depois de perceber, a meio do Dia 2, que commits tinham ido parar na main por engano; corrigido criando a branch a partir do ponto atual, sem necessidade de reescrever histórico.
+
+**Lacuna conhecida:** o CNPJ do órgão é validado (`cnpj_valido`), mas o resultado
+não está anexado a nenhum campo do schema de forma clara desde a simplificação do
+Dia 4 (removemos o acoplamento que ele tinha com o campo `objeto`, por
+inconsistência). Seria bom adicionar um campo dedicado ou anexar ao motivo de
+todos os 8 campos quando o CNPJ do órgão é inválido.
 ...

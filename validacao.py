@@ -112,9 +112,9 @@ def validar_contratacao(
     cnpj_valido = validar_cnpj(cnpj)
 
     objeto = CampoExtraido(
-        valor=objeto_raw if (objeto_raw and cnpj_valido) else None,
-        confiavel=bool(objeto_raw) and cnpj_valido,
-        motivo=None if (objeto_raw and cnpj_valido) else "CNPJ do órgão não passou na validação de dígito verificador",
+        valor=objeto_raw if objeto_raw else None,
+        confiavel=bool(objeto_raw),
+        motivo=None if objeto_raw else "campo ausente na API",
         fonte="objetoCompra (API)",
     )
 
@@ -160,8 +160,7 @@ def validar_contratacao(
         bruto = extracao_textual.get(nome_campo)
         if not isinstance(bruto, dict):
             return CampoExtraido(
-                valor=None,
-                confiavel=False,
+                valor=None, confiavel=False,
                 motivo=f"resposta do LLM malformada para este campo (esperava objeto JSON, veio {type(bruto).__name__})",
                 fonte=None,
             )
@@ -170,8 +169,7 @@ def validar_contratacao(
 
         if valor is None:
             return CampoExtraido(
-                valor=None,
-                confiavel=False,
+                valor=None, confiavel=False,
                 motivo=bruto.get("motivo") or "não encontrado pelo modelo no texto do edital",
                 fonte=None,
             )

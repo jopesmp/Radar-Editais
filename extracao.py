@@ -55,7 +55,6 @@ load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODELO = "google/gemma-4-26b-a4b-it:free"
 LIMITE_CARACTERES = 60_000  
 
 
@@ -66,7 +65,7 @@ def montar_prompt(texto_edital: str) -> str:
 REGRAS IMPORTANTES:
 - Só extraia informação que está EXPLICITAMENTE escrita no texto. Nunca deduza, infira ou complete com conhecimento geral.
 - Para cada campo, cite o TRECHO EXATO do texto (copiado literalmente, palavra por palavra) que comprova sua resposta.
-- - Se a informação não aparecer no texto, retorne valor null e trecho_citado null para aquele campo. Não invente.
+- Se a informação não aparecer no texto, retorne valor null e trecho_citado null para aquele campo. Não invente.
 - O texto pode ter cabeçalhos de capítulo quebrados por PDF mal formatado (ex: "HABILIT\nAÇÃO"). Procure os conceitos mesmo que o cabeçalho esteja com espaçamento ou quebra de linha estranha.
 - Leia o texto INTEIRO antes de responder, não só o início — as informações podem estar em qualquer parte do documento.
 
@@ -164,25 +163,9 @@ def chamar_llm(prompt: str, tentativas_por_modelo: int = 1) -> tuple[dict, str, 
 
 
 def extrair_campos_textuais(cnpj: str, ano: int, sequencial: int) -> dict:
-    """Retorna os 3 campos textuais extraídos via LLM, mais metadados de execução."""
+    """Busca o PDF e extrai os 3 campos textuais via LLM."""
     texto = extrair_texto_edital(cnpj, ano, sequencial)
-
-    if texto is None:
-        motivo = "documento não encontrado ou sem camada de texto extraível (PDF escaneado)"
-        campo_vazio = {"valor": None, "trecho_citado": None, "motivo": motivo}
-        return {
-            "prazo_execucao": campo_vazio,
-            "exigencia_atestado_capacidade_tecnica": campo_vazio,
-            "exigencias_habilitacao": campo_vazio,
-            "modelo_usado": None,
-            "latencia_segundos": None,
-        }
-
-    prompt = montar_prompt(texto)
-    resultado, modelo, latencia = chamar_llm(prompt)
-    resultado["modelo_usado"] = modelo
-    resultado["latencia_segundos"] = latencia
-    return resultado
+    return extrair_campos_textuais_de_texto(texto)
 
 
 def extrair_campos_textuais_de_texto(texto_edital: str | None) -> dict:
