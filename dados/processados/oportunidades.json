@@ -4644,5 +4644,409 @@
         }
       ]
     }
+  },
+  {
+    "numero_controle_pncp": "00394684000153-1-000136/2026",
+    "objeto": {
+      "valor": "Registro de Preços a fim de possibilitar a futura aquisição de produtos de higiene pessoal (creme dental, sabonete, desodorante, entre outros similares), visando atender às necessidades dos diversos órgãos e entidades que compõem a estrutura administrativa do Distrito Federal, conforme especificações e condições estabelecidas no termo de referência constante do Anexo I do Edital.",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "objetoCompra (API)"
+    },
+    "modalidade": {
+      "valor": "Pregão - Eletrônico",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "modalidadeNome (API)"
+    },
+    "valor_estimado": {
+      "valor": 2832397.63,
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "valorTotalEstimado (API)"
+    },
+    "prazo_execucao": {
+      "valor": "12 (doze) meses, prorrogável por igual período",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "LLM (nex-agi/nex-n2.5-mini:free)"
+    },
+    "data_abertura_propostas": {
+      "valor": "2026-09-09T08:00:00",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "dataAberturaProposta (API)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "exigencias_habilitacao": {
+      "valor": "documentos de habilitação jurídica, fiscal, social e trabalhista e econômico-financeira, registrados no SICAF, e declaração de atendimento aos requisitos de habilitação",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "LLM (nex-agi/nex-n2.5-mini:free)"
+    },
+    "municipio_uf": {
+      "valor": "Brasília/DF",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "unidadeOrgao (API)"
+    },
+    "score": {
+      "valor_final": 75.0,
+      "pontos_obtidos": 60,
+      "pontos_possiveis_avaliados": 80,
+      "pontos_possiveis_totais": 100,
+      "criterios_avaliados": 4,
+      "criterios_totais": 5,
+      "detalhamento": [
+        {
+          "criterio": "localizacao",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Brasília/DF está na área de atuação padrão (DF/GO/MG)",
+          "fonte": "municipio_uf"
+        },
+        {
+          "criterio": "aderencia_objeto",
+          "peso_maximo": 30,
+          "pontos": 10,
+          "avaliado": true,
+          "justificativa": "objeto não menciona claramente nenhuma especialidade nem contraria — neutro/baixo",
+          "fonte": "objeto"
+        },
+        {
+          "criterio": "valor_na_faixa_operacional",
+          "peso_maximo": 20,
+          "pontos": 20,
+          "avaliado": true,
+          "justificativa": "R$ 2,832,397.63 dentro da faixa operacional (R$150mil–R$5mi)",
+          "fonte": "valor_estimado"
+        },
+        {
+          "criterio": "modalidade_preferida",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Pregão - Eletrônico está entre as modalidades preferidas",
+          "fonte": "modalidade"
+        },
+        {
+          "criterio": "atestado_tecnico",
+          "peso_maximo": 20,
+          "pontos": null,
+          "avaliado": false,
+          "justificativa": "exigência de atestado não confiável/indisponível para avaliar",
+          "fonte": null
+        }
+      ]
+    }
+  },
+  {
+    "numero_controle_pncp": "34028316000103-1-000067/2026",
+    "objeto": {
+      "valor": "Prestação de serviços de coleta e remoção de resíduos indiferenciados/rejeitos, originários das atividades dos órgãos dos Correios Sede. REGISTRAR VALOR TOTAL DO LOTE - SUGERIMOS MINUCIOSA LEITURA DO EDITAL E SEUS ANEXOS.",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "objetoCompra (API)"
+    },
+    "modalidade": {
+      "valor": "Pregão - Eletrônico",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "modalidadeNome (API)"
+    },
+    "valor_estimado": {
+      "valor": 0.0,
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "valorTotalEstimado (API)"
+    },
+    "prazo_execucao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "data_abertura_propostas": {
+      "valor": "2026-09-09T09:00:00",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "dataAberturaProposta (API)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "citação do LLM não encontrada literalmente no texto de origem (possível alucinação)",
+      "fonte": null
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "citação do LLM não encontrada literalmente no texto de origem (possível alucinação)",
+      "fonte": null
+    },
+    "municipio_uf": {
+      "valor": "Brasília/DF",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "unidadeOrgao (API)"
+    },
+    "score": {
+      "valor_final": 56.2,
+      "pontos_obtidos": 45,
+      "pontos_possiveis_avaliados": 80,
+      "pontos_possiveis_totais": 100,
+      "criterios_avaliados": 4,
+      "criterios_totais": 5,
+      "detalhamento": [
+        {
+          "criterio": "localizacao",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Brasília/DF está na área de atuação padrão (DF/GO/MG)",
+          "fonte": "municipio_uf"
+        },
+        {
+          "criterio": "aderencia_objeto",
+          "peso_maximo": 30,
+          "pontos": 10,
+          "avaliado": true,
+          "justificativa": "objeto não menciona claramente nenhuma especialidade nem contraria — neutro/baixo",
+          "fonte": "objeto"
+        },
+        {
+          "criterio": "valor_na_faixa_operacional",
+          "peso_maximo": 20,
+          "pontos": 5,
+          "avaliado": true,
+          "justificativa": "R$ 0.00 abaixo do piso de interesse de R$150 mil",
+          "fonte": "valor_estimado"
+        },
+        {
+          "criterio": "modalidade_preferida",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Pregão - Eletrônico está entre as modalidades preferidas",
+          "fonte": "modalidade"
+        },
+        {
+          "criterio": "atestado_tecnico",
+          "peso_maximo": 20,
+          "pontos": null,
+          "avaliado": false,
+          "justificativa": "exigência de atestado não confiável/indisponível para avaliar",
+          "fonte": null
+        }
+      ]
+    }
+  },
+  {
+    "numero_controle_pncp": "00037457000170-1-000021/2026",
+    "objeto": {
+      "valor": "Registro de Preços para execução, sob demanda, de soluções mistas de drenagem pluvial, compreendendo trechos em rede coletora convencional e em galerias executadas por tunnel liner, mediante emprego combinado de método destrutivo e de método não destrutivo (MND), na Região Administrativa de Arniqueiras, de acordo com as especificações técnicas do Termo de Referência e do Edital e seus anexos.",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "objetoCompra (API)"
+    },
+    "modalidade": {
+      "valor": "Pregão - Eletrônico",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "modalidadeNome (API)"
+    },
+    "valor_estimado": {
+      "valor": 9140477.81,
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "valorTotalEstimado (API)"
+    },
+    "prazo_execucao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "citação do LLM não encontrada literalmente no texto de origem (possível alucinação)",
+      "fonte": null
+    },
+    "data_abertura_propostas": {
+      "valor": "2026-09-08T15:00:00",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "dataAberturaProposta (API)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "citação do LLM não encontrada literalmente no texto de origem (possível alucinação)",
+      "fonte": null
+    },
+    "municipio_uf": {
+      "valor": "Brasília/DF",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "unidadeOrgao (API)"
+    },
+    "score": {
+      "valor_final": 78.8,
+      "pontos_obtidos": 63,
+      "pontos_possiveis_avaliados": 80,
+      "pontos_possiveis_totais": 100,
+      "criterios_avaliados": 4,
+      "criterios_totais": 5,
+      "detalhamento": [
+        {
+          "criterio": "localizacao",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Brasília/DF está na área de atuação padrão (DF/GO/MG)",
+          "fonte": "municipio_uf"
+        },
+        {
+          "criterio": "aderencia_objeto",
+          "peso_maximo": 30,
+          "pontos": 30,
+          "avaliado": true,
+          "justificativa": "objeto menciona diretamente especialidade da Engevia",
+          "fonte": "objeto"
+        },
+        {
+          "criterio": "valor_na_faixa_operacional",
+          "peso_maximo": 20,
+          "pontos": 3,
+          "avaliado": true,
+          "justificativa": "R$ 9,140,477.81 acima do teto operacional de R$5 milhões",
+          "fonte": "valor_estimado"
+        },
+        {
+          "criterio": "modalidade_preferida",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Pregão - Eletrônico está entre as modalidades preferidas",
+          "fonte": "modalidade"
+        },
+        {
+          "criterio": "atestado_tecnico",
+          "peso_maximo": 20,
+          "pontos": null,
+          "avaliado": false,
+          "justificativa": "exigência de atestado não confiável/indisponível para avaliar",
+          "fonte": null
+        }
+      ]
+    }
+  },
+  {
+    "numero_controle_pncp": "00348003000110-1-000935/2026",
+    "objeto": {
+      "valor": "Contratação de empresa especializada para a prestação de Serviço de Inspeção e Manutenção de Extintor de Incêndio, com recarga, e de mangueira de incêndio, incluindo a substituição de componentes avariados, para atender a Embrapa CENARGEN no Distrito Federal/DF, de acordo com as especificações técnicas, condições, quantidades e padrões de desempenho e qualidade estabelecidas no Termo de Referência (Anexo I)",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "objetoCompra (API)"
+    },
+    "modalidade": {
+      "valor": "Pregão - Eletrônico",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "modalidadeNome (API)"
+    },
+    "valor_estimado": {
+      "valor": 0.0,
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "valorTotalEstimado (API)"
+    },
+    "prazo_execucao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "data_abertura_propostas": {
+      "valor": "2026-09-10T08:00:00",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "dataAberturaProposta (API)"
+    },
+    "exigencia_atestado_capacidade_tecnica": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "exigencias_habilitacao": {
+      "valor": null,
+      "confiavel": false,
+      "motivo": "não encontrado pelo modelo no texto do edital",
+      "fonte": null
+    },
+    "municipio_uf": {
+      "valor": "Brasília/DF",
+      "confiavel": true,
+      "motivo": null,
+      "fonte": "unidadeOrgao (API)"
+    },
+    "score": {
+      "valor_final": 56.2,
+      "pontos_obtidos": 45,
+      "pontos_possiveis_avaliados": 80,
+      "pontos_possiveis_totais": 100,
+      "criterios_avaliados": 4,
+      "criterios_totais": 5,
+      "detalhamento": [
+        {
+          "criterio": "localizacao",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Brasília/DF está na área de atuação padrão (DF/GO/MG)",
+          "fonte": "municipio_uf"
+        },
+        {
+          "criterio": "aderencia_objeto",
+          "peso_maximo": 30,
+          "pontos": 10,
+          "avaliado": true,
+          "justificativa": "objeto não menciona claramente nenhuma especialidade nem contraria — neutro/baixo",
+          "fonte": "objeto"
+        },
+        {
+          "criterio": "valor_na_faixa_operacional",
+          "peso_maximo": 20,
+          "pontos": 5,
+          "avaliado": true,
+          "justificativa": "R$ 0.00 abaixo do piso de interesse de R$150 mil",
+          "fonte": "valor_estimado"
+        },
+        {
+          "criterio": "modalidade_preferida",
+          "peso_maximo": 15,
+          "pontos": 15,
+          "avaliado": true,
+          "justificativa": "Pregão - Eletrônico está entre as modalidades preferidas",
+          "fonte": "modalidade"
+        },
+        {
+          "criterio": "atestado_tecnico",
+          "peso_maximo": 20,
+          "pontos": null,
+          "avaliado": false,
+          "justificativa": "exigência de atestado não confiável/indisponível para avaliar",
+          "fonte": null
+        }
+      ]
+    }
   }
 ]

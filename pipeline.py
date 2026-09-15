@@ -53,6 +53,8 @@ def processar_lote(registros: list[dict]) -> list[ContratacaoExtraida]:
         print(f"[{i}/{len(registros)}] {numero}")
         try:
             resultados.append(processar_contratacao(registro))
-        except Exception as e:
-            print(f"[erro] {numero}: pipeline falhou completamente ({e})")
+        except Exception:
+            import traceback
+            print(f"[erro] {numero}: pipeline falhou completamente")
+            traceback.print_exc()
     return resultados
