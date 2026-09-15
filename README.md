@@ -74,6 +74,7 @@ valor informado, ordenadas da maior pra menor pontuação.
 
 ## Estrutura do projeto
 
+```
 .
 ├── schema.py              # formato dos dados (dataclasses) — sem lógica de decisão
 ├── ingestao.py             # coleta de dados da API do PNCP (corrige bug herdado de dedup)
@@ -89,6 +90,7 @@ valor informado, ordenadas da maior pra menor pontuação.
 │   ├── brutos/               # JSON cru coletado da API do PNCP
 │   └── processados/          # saída do pipeline
 └── scripts/                 # utilitários de apoio (não fazem parte do pipeline formal)
+```
 
 
 ## Coletando novos dados
