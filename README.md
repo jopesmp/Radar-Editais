@@ -1,7 +1,7 @@
 # Radar de Editais — Engevia
 
 Sistema que ingere editais de licitação pública do PNCP, extrai 8 campos
-estruturados, valida o que extraiu por regras determinísticas (sem IA) e
+estruturados, valida o que extraiu por regras determinísticas e
 calcula um score de aderência ao perfil da Engevia Consultoria e Projetos.
 
 ## Como rodar:
