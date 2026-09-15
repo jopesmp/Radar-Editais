@@ -1,13 +1,74 @@
-Dia 1)
-Arquitetura da ingestão: API do PNCP tem 5 dos 8 campos estruturados; os outros 3 exigem baixar o PDF do edital via endpoint /arquivos.
-Bug corrigido e medido: deduplicação por orgaoEntidade.cnpj descartava ~30% dos registros legítimos; trocado para numeroControlePNCP.
-Tratamento de dado ausente: quando o Projeto Básico não está anexado, os campos correspondentes viram null explícito com motivo, não erro nem invenção.
-Tratamento de valor sigiloso: identificado como problema de validação determinística (cruzar número suspeito + texto do objeto), não de extração — resolver depois.
-Separação extração/validação: módulos física e estruturalmente separados, seguindo uma "linha de montagem" onde cada módulo só importa dos que vêm antes dele — decisão pensada especificamente pra impedir que um atalho de última hora deixe o LLM "vazar" pra validação.
-Score normalizado sobre critérios avaliados (não sobre o total), com criterios_avaliados/criterios_totais sempre visíveis pra não mascarar quando o score foi calculado sobre poucos dados.
+# DECISOES.md
 
-Dia 2)
-Composição do gabarito: 15 documentos escolhidos por categoria de dificuldade de extração (documento limpo, valor sigiloso, anexo ausente, formatação/plataforma diferente, objeto ambíguo, modalidade diferente) — não pelos mais fáceis de ler, pra não inflar artificialmente a acurácia medida depois pelo eval.py.
+## As 5 decisões técnicas principais
+
+### 1. LLM só nos 3 campos que a API não fornece
+5 dos 8 campos pedidos (objeto, modalidade, valor, data de abertura, município/UF)
+vêm prontos e estruturados da API do PNCP — descoberto lendo a especificação OpenAPI
+no Dia 1. Decidimos que o LLM só é chamado para os outros 3 (prazo de execução,
+atestado técnico, exigências de habilitação), que só existem no texto livre do PDF.
+**Alternativa descartada:** re-extrair todos os 8 campos via LLM, por uniformidade de
+código. Descartada porque aumentaria custo, latência e superfície de erro/alucinação
+em campos que já eram 100% confiáveis via API — contrário à regra 3.3 do desafio.
+
+### 2. Separação física entre extração (com LLM) e validação (sem LLM)
+`validacao.py` nunca importa `extracao.py` nem chama qualquer API de LLM — os dois
+módulos só se conectam dentro de `pipeline.py`. Decisão tomada antes de escrever
+qualquer código, especificamente para tornar estruturalmente impossível que um atalho
+de última hora (ex: um `except: return valor_nao_validado`) deixe uma alucinação do
+LLM passar direto pra API sem checagem.
+**Alternativa descartada:** funções de extração e validação no mesmo arquivo,
+chamadas em sequência por uma função orquestradora. Mais simples de escrever, mas um
+`try/except` de distância de furar a regra "o LLM não pode ser juiz final de nada".
+
+### 3. Score normalizado só sobre os critérios que puderam ser avaliados
+Quando um campo necessário pra um critério do score (ex: valor sigiloso, atestado
+técnico ausente) não é confiável, aquele critério some do cálculo — o score final é
+`pontos_obtidos / pontos_possiveis_AVALIADOS`, não sobre o total. Mas
+`criterios_avaliados`/`criterios_totais` sempre aparecem junto, pra não esconder
+quando o score foi calculado sobre poucos critérios.
+**Alternativa descartada:** contar critério não avaliado como pontuação neutra
+(zero). Rejeitada porque isso trata "não sei" e "não se aplica bem" da mesma forma,
+o que é enganoso — decisão amarrada ao exemplo do Anexo A ("como o score se comporta
+quando falta um campo relevante?").
+
+### 4. Validação de citação por trechos/frases, não por igualdade exata de string
+A regra 3.3 exige que "valor extraído tem que existir literalmente no texto de
+origem". Implementamos isso comparando se as frases da citação do LLM aparecem
+(normalizadas) no texto original do PDF — com tolerância a diferenças de formatação
+comuns (ligaduras tipográficas do PDF, sintaxe de link Markdown que o LLM às vezes
+introduz).
+**Alternativa descartada:** exigir igualdade exata de string inteira. Testamos essa
+versão primeiro; ela rejeitava citações genuínas e corretas só por diferenças
+triviais de formatação, produzindo falsos negativos em excesso — mais espinhoso que
+útil pro sócio.
+
+### 5. Fallback entre 5 modelos gratuitos fixos, em vez de roteador automático
+`extracao.py` tenta uma lista fixa de modelos gratuitos do OpenRouter em ordem, até
+um responder com sucesso. Descartamos o roteador `openrouter/free` (que sorteia
+modelo a cada chamada) depois de ver, na prática, timeouts em modelos grandes,
+respostas vazias em modelos de raciocínio longo, e variação inaceitável de latência.
+**Alternativa descartada:** confiar no roteador automático por simplicidade.
+Descartada porque comprometia tanto a qualidade (modelo sorteado podia ser fraco
+demais) quanto a possibilidade de medir latência/custo de forma consistente,
+exigida pelo `RESULTADOS.md`.
+
+## O que mudaríamos se tivéssemos mais tempo
+
+**Abrir arquivos `.zip`/`.rar`.** Descoberto tarde (Dia 3, ao rodar em 50 contratações
+reais) que ~34% dos documentos reais vêm compactados, não como PDF direto — bem mais
+que os 4 casos isolados da Caixa que identificamos no Dia 1. Isso afeta uma fatia
+real e não-trivial do sistema em produção. Não implementamos extração de zip por
+tempo, mas é a limitação de maior impacto que ficou de fora do MVP.
+
+---
+
+## Log cronológico de decisões por dia
+(mantido como histórico do processo — ver acima para as 5 decisões curadas)
+
+Dia 1) Arquitetura da ingestão: API do PNCP tem 5 dos 8 campos estruturados; os outros 3 exigem baixar o PDF do edital via endpoint /arquivos. Bug corrigido e medido: deduplicação por orgaoEntidade.cnpj descartava ~30% dos registros legítimos; trocado para numeroControlePNCP. Tratamento de dado ausente: quando o Projeto Básico não está anexado, os campos correspondentes viram null explícito com motivo, não erro nem invenção. Tratamento de valor sigiloso: identificado como problema de validação determinística (cruzar número suspeito + texto do objeto), não de extração — resolver depois. Separação extração/validação: módulos física e estruturalmente separados, seguindo uma "linha de montagem" onde cada módulo só importa dos que vêm antes dele — decisão pensada especificamente pra impedir que um atalho de última hora deixe o LLM "vazar" pra validação. Score normalizado sobre critérios avaliados (não sobre o total), com criterios_avaliados/criterios_totais sempre visíveis pra não mascarar quando o score foi calculado sobre poucos dados.
+
+Dia 2) Composição do gabarito: 15 documentos escolhidos por categoria de dificuldade de extração (documento limpo, valor sigiloso, anexo ausente, formatação/plataforma diferente, objeto ambíguo, modalidade diferente) — não pelos mais fáceis de ler, pra não inflar artificialmente a acurácia medida depois pelo eval.py.
 
 Formato do gabarito simplificado: gabarito.json guarda só o valor correto e literal de cada campo (sem a estrutura confiavel/motivo/fonte do schema.py) — essa rastreabilidade é responsabilidade do sistema em produção, não do gabarito, que existe só pra comparação.
 
@@ -24,3 +85,4 @@ Limitações de escopo do MVP registradas explicitamente: (1) pipeline não proc
 Exigência de habilitação pode ser geograficamente restritiva: edital de Santa Terezinha de Goiás exige que o licitante já possua posto de combustível instalado no próprio município. Relevante pro score.py — esse tipo de exigência pode ser um desqualificador direto (a Engevia não tem presença física em todo município do DF/GO/MG), diferente de exigências "genéricas" de habilitação que qualquer empresa cumpre.
 
 Organização de branches por tarefa: feat/ingestao-pncp (Dia 1) e feat/gabarito (Dia 2), cada uma com commits granulares ao longo do trabalho — decisão tomada depois de perceber, a meio do Dia 2, que commits tinham ido parar na main por engano; corrigido criando a branch a partir do ponto atual, sem necessidade de reescrever histórico.
+...
