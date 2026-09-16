@@ -1,9 +1,17 @@
 """API FastAPI — endpoint obrigatório GET /oportunidades?min_score=70."""
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 
 from storage import carregar_resultados
 
 app = FastAPI(title="Radar de Editais — Engevia")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # em uso interno local, liberar geral é suficiente
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/oportunidades")
