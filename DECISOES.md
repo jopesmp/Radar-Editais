@@ -62,7 +62,29 @@ que os 4 casos isolados da Caixa que eu tinha identificado no Dia 1. Isso afeta 
 fatia real e não-trivial do sistema em produção. Não implementei extração de zip por
 falta de tempo, mas é a limitação de maior impacto que ficou de fora do MVP.
 
----
+**Rastreabilidade do resultado da validação de CNPJ.** O CNPJ do órgão é validado
+(`cnpj_valido`) em `validacao.py`, mas hoje o resultado não está anexado a nenhum
+campo do schema de forma clara — removi o acoplamento que ele tinha originalmente
+com o campo `objeto` por inconsistência (não fazia sentido o CNPJ "contaminar" a
+confiabilidade de um campo que não depende dele), e não cheguei a colocá-lo em um
+lugar melhor. Resultado: hoje, se o CNPJ do órgão for inválido, essa informação é
+computada mas fica efetivamente invisível para o sócio. Se tivesse mais tempo,
+adicionaria um campo dedicado no schema (ex: `orgao_cnpj_valido`) em vez de tentar
+reacoplar a um campo de negócio que não tem relação direta.
+
+## Como o front-end (dia extra) se encaixa
+
+O front (`frontend/index.html`) não altera nenhuma das 5 decisões acima — ele só
+consome a API já existente. As decisões técnicas específicas do front (menores, mas
+documentadas para coerência do processo):
+
+- **Filtro por score mínimo processado no cliente, não em nova chamada à API.**
+  Dataset pequeno o suficiente para caber inteiro na memória do navegador, resposta
+  ao filtro instantânea, e menos pontos de falha de rede durante a defesa ao vivo.
+- **Isolamento em branch (`feature/frontend`), não fork.** Mantém histórico de
+  commits único no mesmo repositório (relevante para a regra 3.6), com uma tag
+  (`v1-api-estavel`) marcando o ponto de resgate antes de começar — permite abandonar
+  o front sem impacto na `main` caso não ficasse pronto a tempo.
 
 ## Log cronológico de decisões por dia
 (mantido como histórico do meu processo — ver acima para as 5 decisões curadas)
@@ -119,18 +141,27 @@ arbitrariamente um dos três números.
 
 Pegadinha de localização identificada (DNIT, 2 editais): `unidadeOrgao` aponta
 Brasília/DF (sede administrativa), mas a obra física ocorre em outros estados (SC/RS;
-RN/PB/PE/AL/SE). Decisão em aberto para o `score.py`: o critério de "localização"
-deve considerar a sede do órgão ou o local físico da obra (que só existe no texto do
-objeto)? Ainda não decidi — registrado como ponto a resolver antes de implementar o
-`score.py`.
+RN/PB/PE/AL/SE). **Decisão: o critério de "localização" do `score.py` considera a
+sede do órgão (`unidadeOrgao`), não o local físico da obra.** Optei pela sede por
+simplificação: é o único dado estruturado e confiável vindo direto da API em todos os
+casos, enquanto o local físico da obra só existe (quando existe) como texto livre
+dentro do objeto, exigindo extração adicional sujeita às mesmas limitações do modelo
+fraco. Trade-off consciente: nos casos tipo DNIT, o critério de localização pode
+pontuar "dentro da área de atuação" mesmo quando a obra real é fora do DF/GO/MG —
+limitação documentada, não escondida.
 
-**Dia 3)** Limitações de escopo do MVP registradas explicitamente: (1) o pipeline 
-não processa anexos em `.zip` (4 editais da Caixa vinham assim) — fiz a extração 
+**Dia 3)** Limitações de escopo do MVP registradas explicitamente: (1) o pipeline
+não processa anexos em `.zip` (4 editais da Caixa vinham assim) — fiz a extração
 manual para o gabarito, mas o `extracao.py` em produção vai precisar decidir se abre
-zips ou ignora; (2) PDFs escaneados sem camada de texto (1 edital, Santa Terezinha
-exigem OCR, não extração direta — mais lento e menos confiável; o `extracao.py` real vai
-precisar de um caminho de fallback para esse caso ou aceitar que esses documentos
-ficam com campos `null` por padrão.
+zips ou ignora, ficando de fora do MVP por ora (ver "O que eu mudaria se tivesse mais
+tempo"); (2) **PDFs escaneados sem camada de texto (1 edital, Santa Terezinha):
+decidi não implementar OCR para esse tipo de documento, para economizar recursos**
+(tempo de processamento e, potencialmente, custo, já que OCR de qualidade
+frequentemente depende de mais uma chamada de API ou de processamento local mais
+pesado do que vale a pena para um caso isolado no dataset). Esses documentos ficam
+com os campos correspondentes `null`, com motivo explícito ("documento sem camada de
+texto extraível, OCR fora do escopo"), em vez de tentar uma extração que eu não
+validei como confiável.
 
 Exigência de habilitação pode ser geograficamente restritiva: o edital de Santa
 Terezinha de Goiás exige que o licitante já possua posto de combustível instalado no
@@ -145,8 +176,13 @@ de perceber, no meio do Dia 2, que alguns commits tinham ido parar na `main` por
 engano; corrigi criando a branch a partir do ponto atual, sem necessidade de
 reescrever histórico.
 
-**Dia 4)** o CNPJ do órgão é validado (`cnpj_valido`), mas o resultado não
-está anexado a nenhum campo do schema de forma clara desde a simplificação 
-(removi o acoplamento que ele tinha com o campo `objeto`, por inconsistência). Seria
-bom adicionar um campo dedicado ou anexar ao motivo de todos os 8 campos quando o
-CNPJ do órgão é inválido.
+**Dia 4)** Validação de CNPJ (`cnpj_valido`) implementada em `validacao.py`, mas
+resultado hoje não anexado a nenhum campo do schema de forma clara — removi o
+acoplamento que tinha com o campo `objeto`, por inconsistência. Ver seção "O que eu
+mudaria se tivesse mais tempo".
+
+**Dia extra)** Front-end construído em camadas pequenas e testadas isoladamente
+(fetch simples → filtro → detalhamento do score → alerta de campos não confiáveis →
+organização visual → tratamento de erro de conexão/lista vazia), em branch separada
+(`feature/frontend`) com merge para `main` só depois de confirmado funcionando. Ver
+seção "Como o front-end se encaixa" para as decisões técnicas específicas.
