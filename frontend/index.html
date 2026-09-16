@@ -4,14 +4,66 @@
   <meta charset="UTF-8">
   <title>Radar de Editais — Engevia</title>
   <style>
+    body {
+      font-family: system-ui, -apple-system, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-score {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #1a5d1a;
+    }
+
     .campo-alerta {
       background-color: #fff3cd;
       border-left: 4px solid #e67e00;
       padding: 6px 10px;
+      margin: 8px 0;
     }
+
     .motivo {
       font-size: 0.85em;
       color: #6b4e00;
+    }
+
+    .card ul {
+      margin-top: 4px;
+      padding-left: 20px;
+      font-size: 0.9em;
+    }
+
+    .card li {
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -64,9 +116,9 @@
 
       for (const op of oportunidades) {
         const bloco = document.createElement("div");
+        bloco.className = "card";
         bloco.innerHTML = `
-          <hr>
-          <p><strong>Score:</strong> ${op.score.valor_final}</p>
+          <p class="card-score">Score: ${op.score.valor_final}</p>
           ${renderizarCampo("Objeto", op.objeto)}
           ${renderizarCampo("Modalidade", op.modalidade)}
           ${renderizarCampo("Valor estimado", op.valor_estimado)}
