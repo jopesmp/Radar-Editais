@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Radar de Editais — Engevia</title>
+  <style>
+    .campo-alerta {
+      background-color: #fff3cd;
+      border-left: 4px solid #e67e00;
+      padding: 6px 10px;
+    }
+    .motivo {
+      font-size: 0.85em;
+      color: #6b4e00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Oportunidades</h1>
+
+  <label>
+    Score mínimo: <span id="valorFiltro">0</span>
+    <input type="range" id="filtroScore" min="0" max="100" value="0" step="1">
+  </label>
+
+  <div id="lista">Carregando...</div>
+
+  <script>
+    let todasOportunidades = [];
+
+    async function carregarOportunidades() {
+      const resposta = await fetch("http://localhost:8000/oportunidades?min_score=0");
+      const dados = await resposta.json();
+      todasOportunidades = dados.oportunidades;
+      renderizar(todasOportunidades);
+    }
+
+    function renderizarCampo(rotulo, campo) {
+      if (campo.confiavel) {
+        return `<p><strong>${rotulo}:</strong> ${campo.valor}</p>`;
+      } else {
+        return `
+          <p class="campo-alerta">
+            <strong>${rotulo}:</strong> ⚠️ não confiável
+            <br><span class="motivo">Motivo: ${campo.motivo}</span>
+          </p>
+        `;
+      }
+    }
+
+    function renderizarDetalhamento(detalhamento) {
+      return detalhamento.map(item => {
+        if (item.avaliado) {
+          return `<li>${item.criterio}: ${item.pontos}/${item.peso_maximo} pontos — ${item.justificativa}</li>`;
+        } else {
+          return `<li>${item.criterio}: critério não avaliado — ${item.justificativa}</li>`;
+        }
+      }).join("");
+    }
+
+    function renderizar(oportunidades) {
+      const container = document.getElementById("lista");
+      container.innerHTML = "";
+
+      for (const op of oportunidades) {
+        const bloco = document.createElement("div");
+        bloco.innerHTML = `
+          <hr>
+          <p><strong>Score:</strong> ${op.score.valor_final}</p>
+          ${renderizarCampo("Objeto", op.objeto)}
+          ${renderizarCampo("Modalidade", op.modalidade)}
+          ${renderizarCampo("Valor estimado", op.valor_estimado)}
+          ${renderizarCampo("Prazo de execução", op.prazo_execucao)}
+          ${renderizarCampo("Data de abertura das propostas", op.data_abertura_propostas)}
+          ${renderizarCampo("Exigência de atestado técnico", op.exigencia_atestado_capacidade_tecnica)}
+          ${renderizarCampo("Exigências de habilitação", op.exigencias_habilitacao)}
+          ${renderizarCampo("Município/UF", op.municipio_uf)}
+          <p><strong>Detalhamento do score:</strong></p>
+          <ul>${renderizarDetalhamento(op.score.detalhamento)}</ul>
+        `;
+        container.appendChild(bloco);
+      }
+    }
+
+    const input = document.getElementById("filtroScore");
+    const label = document.getElementById("valorFiltro");
+
+    input.addEventListener("input", () => {
+      const minimo = Number(input.value);
+      label.textContent = minimo;
+
+      const filtradas = todasOportunidades.filter(op => op.score.valor_final >= minimo);
+      renderizar(filtradas);
+    });
+
+    carregarOportunidades();
+  </script>
+</body>
+</html>
