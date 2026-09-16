@@ -65,6 +65,13 @@
     .card li {
       margin-bottom: 4px;
     }
+
+    .erro-conexao {
+      background-color: #f8d7da;
+      border-left: 4px solid #c0392b;
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -81,10 +88,20 @@
     let todasOportunidades = [];
 
     async function carregarOportunidades() {
-      const resposta = await fetch("http://localhost:8000/oportunidades?min_score=0");
-      const dados = await resposta.json();
-      todasOportunidades = dados.oportunidades;
-      renderizar(todasOportunidades);
+      const container = document.getElementById("lista");
+      try {
+        const resposta = await fetch("http://localhost:8000/oportunidades?min_score=0");
+        const dados = await resposta.json();
+        todasOportunidades = dados.oportunidades;
+        renderizar(todasOportunidades);
+      } catch (erro) {
+        container.innerHTML = `
+          <p class="erro-conexao">
+            ⚠️ Não foi possível conectar à API. Verifique se ela está rodando em
+            <code>http://localhost:8000</code> e recarregue a página.
+          </p>
+        `;
+      }
     }
 
     function renderizarCampo(rotulo, campo) {
@@ -113,6 +130,11 @@
     function renderizar(oportunidades) {
       const container = document.getElementById("lista");
       container.innerHTML = "";
+
+      if (oportunidades.length === 0) {
+        container.innerHTML = "<p>Nenhuma oportunidade encontrada para esse filtro.</p>";
+        return;
+      }
 
       for (const op of oportunidades) {
         const bloco = document.createElement("div");
