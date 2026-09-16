@@ -1,9 +1,9 @@
 # AI_LOG.md
 
 Registro de onde usei IA (como par de programação) durante o desenvolvimento, onde ela errou,
-como percebi o erro, e o que fiz a respeito. Separo o registro em duas partes: 
-erros da IA me ajudando a construir o sistema, e erros do modelo fraco que roda dentro do pipeline
-de extração (OpenRouter).
+como percebi o erro, e o que fiz a respeito. Separo o registro em três partes:
+erros da IA me ajudando a construir o sistema (desenvolvimento geral e front-end), e erros
+do modelo fraco que roda dentro do pipeline de extração (OpenRouter).
 
 ---
 
@@ -77,3 +77,39 @@ texto de origem, `trecho in texto`.
 O que fiz: mantive a validação rigorosa como está — prefiro um falso negativo (campo
 correto marcado como não confiável) a um falso positivo (alucinação aceita como
 verdadeira). Documentei como trade-off consciente, não como bug a corrigir.
+
+---
+
+## Parte 3 — Front-end (dia extra)
+
+O front (`frontend/index.html`) foi construído com apoio de IA como par de programação,
+em camadas pequenas e testadas uma a uma antes de avançar (fetch simples sem estilo →
+filtro → detalhamento do score → alerta de campos não confiáveis → CSS → tratamento
+de erro). Dois pontos valem registro:
+
+### 3.1 Estratégia de teste de CORS não funcionou de primeira
+A primeira sugestão da IA para verificar se o CORS estava liberado foi abrir um HTML
+de teste direto do disco (`file:///...`) e rodar um `fetch` pelo console do navegador.
+Isso gerou ruído que não era o erro de CORS de verdade: o Chrome bloqueou o paste no
+console por padrão (proteção contra self-XSS) e ainda apareceram mensagens confusas de
+"Unsafe attempt to load URL... 'file:' URLs are treated as unique security origins",
+que pareciam erro mas eram sobre a própria natureza da origem `file://`, não sobre CORS.
+Como percebi: depois de duas tentativas sem sucesso pelo console, ficou claro que o
+problema era a abordagem de teste, não a configuração de CORS em si — o `CORSMiddleware`
+já tinha sido corrigido e o erro relatado nunca mencionava "CORS policy" de fato.
+O que fiz (com a IA): abandonamos o teste via console/`file://` e passamos a servir a
+pasta por HTTP local (`python -m http.server`) com o teste embutido em um `<script>` no
+próprio HTML, escrevendo o resultado na tela em vez de depender do console. Resolveu de
+primeira e passou a ser o método usado no resto do desenvolvimento do front.
+
+### 3.2 Falha silenciosa não prevista na primeira versão
+A primeira versão do `carregarOportunidades()`, sugerida pela IA, não tinha tratamento
+de erro no `fetch`. Ao testar manualmente o cenário "API fora do ar" (proposto pela IA
+como teste de estresse, não algo que eu pedi), a página ficava presa em "Carregando..."
+para sempre, sem nenhum aviso — uma falha silenciosa, o oposto do que a regra 3.4 do
+desafio pede para o pipeline como um todo.
+Como percebi: reproduzindo o cenário manualmente (derrubando a API e recarregando a
+página) a pedido da própria IA, que sugeriu o teste antes de considerar o front pronto.
+O que fiz: adicionamos `try/catch` em volta do `fetch`, exibindo uma mensagem explícita
+de erro de conexão na tela, e também tratamos o caso de lista vazia (`oportunidades: []`)
+separadamente, para não confundir "sem resultados para o filtro" com "erro de conexão".
