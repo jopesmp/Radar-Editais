@@ -187,7 +187,7 @@ qual caminho gerou os dados.
 ## Coletando novos dados
 
 ```bash
-python ingestao.py --uf DF --dias 7 --modalidade 6 --limite 50 --saida meus_dados.json -v
+python ingestao.py --uf DF --dias 7 --modalidade 6 --limite 50 --saida dados/brutos/bruto_df.json -v
 ```
 
 Parâmetros: `--uf` (uma UF por vez), `--dias` (janela retroativa),
